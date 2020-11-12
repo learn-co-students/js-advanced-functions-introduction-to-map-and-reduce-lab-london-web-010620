@@ -17,8 +17,22 @@ function mapToSquare(sourceArray) {
 
 function reduceToTotal(sourceArray, startingPoint=0) {
     let total = startingPoint
-  for (let i = 0; i < src.length; i++ ) {
-    total = total + src[i]
+  for (let i = 0; i < sourceArray.length; i++ ) {
+    total = total + sourceArray[i]
   }
   return total
+}
+
+function reduceToAllTrue(sourceArray) {
+    for (let i = 0; i < sourceArray.length; i++ ) {
+    if (!sourceArray[i]) return false
+  }
+  return true
+}
+
+function reduceToAnyTrue(sourceArray) {
+  for (let i = 0; i < sourceArray.length; i++ ) {
+    if (sourceArray[i]) return true
+  }
+  return false
 }
